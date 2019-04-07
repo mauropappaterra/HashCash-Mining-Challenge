@@ -12,6 +12,8 @@ def find_hash (student_id):
     flag = False
     start_time = t.datetime.now()
 
+    print ("Finding nonce for " + student_id + "...")
+
     while (not flag):
         # Create nonce
         nonce = ''.join(r.choices(s.ascii_letters + s.digits, k=r.randint(1, 20)))
@@ -36,9 +38,3 @@ message = "SOLUTION FOUND!\nHash -> " + my_solution[0] + "\nNonce -> " + my_solu
 
 with open (my_solution[1] + ".txt", 'w') as file: # Save solution to external file
     file.write (message)
-
-print(message)
-
-
-
-
