@@ -23,8 +23,8 @@ def find_hash (student_id):
         #print(hash[:7])
 
         # FOR TESTING PURPOSES
-        if (attemps == 1500):
-            hash = '000000000000000000000'
+        #if (attemps == 1500):
+            #hash = '000000000000000000000'
 
         #Check if solution is right
         print("Compare " + hash[:7] + " with '0000000'")
