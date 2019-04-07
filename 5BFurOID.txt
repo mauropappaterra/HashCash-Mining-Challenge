@@ -1,0 +1,5 @@
+SOLUTION FOUND!
+Hash -> 0000000c454b9a3aa39bba965da19ca66332e5cd6397259546c1afe5ca1ba376
+Nonce -> 5BFurOID
+Number of Attemps Needed -> 102060752
+Time Needed -> 2:03:33.006824

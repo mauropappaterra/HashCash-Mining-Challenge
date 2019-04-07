@@ -1,0 +1,5 @@
+SOLUTION FOUND!
+Hash -> 000000057983ff22c24abced211de295ccf9ecd57c1f8d349b9eae95ba18901b
+Nonce -> izBlwG
+Number of Attemps Needed -> 131069852
+Time Needed -> 2:31:32.678204
