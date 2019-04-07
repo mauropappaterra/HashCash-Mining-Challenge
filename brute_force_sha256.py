@@ -1,7 +1,8 @@
 # HashCash Mining Challenge
 # brute_force_sha256.py
 # Created by Mauro J. Pappaterra on 07 of April 2019.
-from datetime import datetime as t
+
+import datetime as t
 import hashlib as c
 import random as r
 import string as s
@@ -9,34 +10,35 @@ import string as s
 def find_hash (student_id):
     attemps = 0
     flag = False
-    start_time = t.now()
+    start_time = t.datetime.now()
 
     while (not flag):
-
         # Create nonce
         nonce = ''.join(r.choices(s.ascii_letters + s.digits, k=r.randint(1, 20)))
-        #print(nonce)
-
         # Hash it!
         hash = c.sha256((student_id + nonce).encode()).hexdigest()
-        #print(hash)
-        #print(hash[:7])
 
         # FOR TESTING PURPOSES
-        #if (attemps == 1500):
-            #hash = '000000000000000000000'
+        #if (attemps == 200000):
+        #    hash = '000000000'
 
-        #Check if solution is right
-        print("Compare " + hash[:7] + " with '0000000'")
-        if (hash[:7] == '0000000'):
+        if (hash[:7] == '0000000'): #Check solution
             flag = True
-            total_time = start_time - t.now()
-
-            print ("\nSolution Found!\nHash -> " + hash + "\nNonce -> " + nonce + "\nNumber of Attemps Needed -> " + str(attemps) + "\nTime Needed -> " + str(total_time))
+            total_time = t.datetime.now()- start_time
+            solution = (hash, nonce, attemps, total_time)
         else:
             attemps += 1
 
-    return "nothing"
+    return solution
+
+my_solution = find_hash('45648766')
+message = "SOLUTION FOUND!\nHash -> " + my_solution[0] + "\nNonce -> " + my_solution[1] + "\nNumber of Attemps Needed -> " + str(my_solution[2]) + "\nTime Needed -> " + str(my_solution[3])
+
+with open (my_solution[1] + ".txt", 'w') as file: # Save solution to external file
+    file.write (message)
+
+print(message)
 
 
-print(find_hash('45648766'))
+
+
