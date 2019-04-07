@@ -1,0 +1,1 @@
+# HashCash Mining Challenge
