@@ -1,0 +1,6 @@
+SOLUTION FOUND!
+Input -> '45648766' with at least 7 zeroes
+Nonce -> 5BFurOID
+Hash -> 0000000c454b9a3aa39bba965da19ca66332e5cd6397259546c1afe5ca1ba376
+Number of Attempts Needed -> 102060752
+Time Needed -> 2:03:33.006824

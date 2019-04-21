@@ -1,18 +1,18 @@
 # HashCash Mining Challenge
-# brute_force_sha256.py
-# Created by Mauro J. Pappaterra on 07 of April 2019.
-import datetime as t
+# cython_optimized.pyx
+# Created by Mauro J. Pappaterra on 12 of April 2019.
 import hashlib as c
 import random as r
 import string as s
 
 def find_hash (student_id, zeroes):
-    attempts = 0
-    flag = False
-    no_zeroes = '0' * zeroes
-    start_time = t.datetime.now()
+    cdef int attempts = 0
+    cdef int flag = 1
+    cdef str nonce
+    cdef str hash
+    cdef str no_zeroes = '0' * zeroes
 
-    while (not flag):
+    while (flag):
         # Create nonce
         nonce = ''.join(r.choices(s.ascii_letters + s.digits, k=r.randint(1, 20)))
         # Hash it!
@@ -20,12 +20,12 @@ def find_hash (student_id, zeroes):
 
         # For Testing purposes
         #if (attempts == 1000000):
-        #    hash = '000000000000000000'
+        #    hash = '0000000000000000'
 
         # Check solution
         if (hash[:zeroes] == no_zeroes):
-            flag = True
-            solution = (nonce, hash, attempts, t.datetime.now() - start_time)
+            flag = 0
+            solution = (nonce, hash, attempts)
         else:
             attempts += 1
 

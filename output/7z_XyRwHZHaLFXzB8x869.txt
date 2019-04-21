@@ -1,0 +1,6 @@
+SOLUTION FOUND!
+Input -> '45648766' with at least 7 zeroes
+Nonce -> XyRwHZHaLFXzB8x869
+Hash -> 0000000af932109eee3946418939d3147b34fe634e237d7e58b89d6962404138
+Number of Attempts Needed -> 453218073
+Time Needed -> 4:50:59.586532

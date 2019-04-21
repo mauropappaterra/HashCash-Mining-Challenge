@@ -1,5 +1,0 @@
-SOLUTION FOUND!
-Hash -> 00000000e5759a99c226bd1643fa3f342b87bf3c598a9dfce49d8807114ffcf5
-Nonce -> Bp3yXvhSvh4Tzv
-Number of Attemps Needed -> 20485773
-Time Needed -> 0:23:20.351405
